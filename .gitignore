@@ -1,0 +1,15 @@
+# Java compilation output
+/out/
+*.class
+
+# IDE and Editor configurations
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+*.suo
+*.user
+*.userossc
+*.sln
