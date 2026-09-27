@@ -2,18 +2,36 @@
 #include <iostream>
 using namespace std;
 
+// Constructor
 RouteManager::RouteManager() {
     stationCount = 0;
-    // Initialize matrix to 0 by default (overwritten by loadHardcodedDistances)
+
     for (int i = 0; i < MAX_STATIONS; i++) {
-        for (int j = 0; j < MAX_STATIONS; j++) {
-            distanceMatrix[i][j] = 0;
-        }
+        adjacencyList[i] = nullptr;
     }
 }
 
-// Fills stationIds[] with predefined station IDs.
-// Same IDs used across Java (Main.java) and C++ (TrainArray.cpp) for consistency.
+// Destructor
+RouteManager::~RouteManager() {
+    clearRoutes();
+}
+
+// Delete all linked-list nodes
+void RouteManager::clearRoutes() {
+    for (int i = 0; i < MAX_STATIONS; i++) {
+        Node* current = adjacencyList[i];
+
+        while (current != nullptr) {
+            Node* temp = current;
+            current = current->next;
+            delete temp;
+        }
+
+        adjacencyList[i] = nullptr;
+    }
+}
+
+// Load station IDs
 void RouteManager::loadHardcodedStations() {
     stationIds[0] = "STN001"; // Pune Junction
     stationIds[1] = "STN002"; // Mumbai CST
@@ -24,58 +42,105 @@ void RouteManager::loadHardcodedStations() {
     stationCount = 5;
 }
 
-// Fills the 2D adjacency matrix with hardcoded distances (in km).
-// Matrix is symmetric since these are undirected physical tracks.
-void RouteManager::loadHardcodedDistances() {
-    // STN001-Pune, STN002-Mumbai, STN003-Nagpur, STN004-Nashik, STN005-Solapur
-    int data[MAX_STATIONS][MAX_STATIONS] = {
-        {0,   192, 720, 210, 256},
-        {192, 0,   NO_DIRECT_ROUTE, 165, NO_DIRECT_ROUTE},
-        {720, NO_DIRECT_ROUTE, 0,   NO_DIRECT_ROUTE, 615},
-        {210, 165, NO_DIRECT_ROUTE, 0,   NO_DIRECT_ROUTE},
-        {256, NO_DIRECT_ROUTE, 615, NO_DIRECT_ROUTE, 0}
-    };
-
-    for (int i = 0; i < MAX_STATIONS; i++) {
-        for (int j = 0; j < MAX_STATIONS; j++) {
-            distanceMatrix[i][j] = data[i][j];
-        }
-    }
-}
-
-int RouteManager::getStationIndex(const string& stationId) const {
+// Find station index
+int RouteManager::getStationIndex(
+    const string& stationId
+) const {
     for (int i = 0; i < stationCount; i++) {
         if (stationIds[i] == stationId) {
             return i;
         }
     }
-    return -1; // not found
+
+    return -1;
 }
 
+// Add a connection to the adjacency linked list
+void RouteManager::addConnection(
+    int fromIndex,
+    int toIndex,
+    int distance
+) {
+    Node* newNode = new Node(toIndex, distance);
+
+    // Insert at the beginning of the list
+    newNode->next = adjacencyList[fromIndex];
+    adjacencyList[fromIndex] = newNode;
+}
+
+// Load route distances into the linked lists
+void RouteManager::loadHardcodedDistances() {
+    clearRoutes();
+
+    // Distances between stations
+    int data[MAX_STATIONS][MAX_STATIONS] = {
+        {0,   192, 720, 210, 256},
+        {192, 0,   -1,  165, -1},
+        {720, -1,  0,   -1,  615},
+        {210, 165, -1,  0,   -1},
+        {256, -1,  615, -1,  0}
+    };
+
+    // Build adjacency lists from the distance data
+    for (int i = 0; i < stationCount; i++) {
+        for (int j = 0; j < stationCount; j++) {
+
+            if (i != j && data[i][j] != NO_DIRECT_ROUTE) {
+                addConnection(i, j, data[i][j]);
+            }
+        }
+    }
+}
+
+// Display distances in matrix format
 void RouteManager::displayDistanceMatrix() const {
-    cout << "----- Station Distance Matrix (2D Array) -----" << endl;
+    cout << "\n----- Station Distance Matrix (Linked List) -----\n";
+
     cout << "\t";
+
     for (int i = 0; i < stationCount; i++) {
         cout << stationIds[i] << "\t";
     }
+
     cout << endl;
 
     for (int i = 0; i < stationCount; i++) {
         cout << stationIds[i] << "\t";
+
         for (int j = 0; j < stationCount; j++) {
-            cout << distanceMatrix[i][j] << "\t";
+            cout << getDistance(stationIds[i], stationIds[j]) << "\t";
         }
+
         cout << endl;
     }
 }
 
-int RouteManager::getDistance(const string& fromStationId, const string& toStationId) const {
+// Get direct distance between two stations
+int RouteManager::getDistance(
+    const string& fromStationId,
+    const string& toStationId
+) const {
     int fromIndex = getStationIndex(fromStationId);
     int toIndex = getStationIndex(toStationId);
 
     if (fromIndex == -1 || toIndex == -1) {
-        return NO_DIRECT_ROUTE; // invalid station ID given
+        return NO_DIRECT_ROUTE;
     }
 
-    return distanceMatrix[fromIndex][toIndex];
+    // Distance from a station to itself
+    if (fromIndex == toIndex) {
+        return 0;
+    }
+
+    Node* current = adjacencyList[fromIndex];
+
+    while (current != nullptr) {
+        if (current->stationIndex == toIndex) {
+            return current->distance;
+        }
+
+        current = current->next;
+    }
+
+    return NO_DIRECT_ROUTE;
 }
