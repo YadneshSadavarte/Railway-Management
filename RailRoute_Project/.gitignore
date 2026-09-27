@@ -1,0 +1,12 @@
+*.exe
+*.class
+
+bin/
+out/
+target/
+
+.vscode/
+.idea/
+
+*.log
+*.zip

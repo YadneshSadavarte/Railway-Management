@@ -1,42 +1,51 @@
 package models;
 
-/**
- * Represents a passenger using the RailRoute system.
- * Part of RailRoute PR 1/2/3 - Core Entity Modeling (Review 1).
- */
-public class Passenger {
+public class Passenger extends Person {
 
-    // Instance variables
     private String passengerId;
-    private String name;
     private int age;
     private String gender;
-    private String contactNumber;
 
-    // Constructor
     public Passenger(String passengerId, String name, int age, String gender, String contactNumber) {
+        super(passengerId, name, validateContactNumber(contactNumber));
+
+        try {
+            if (age <= 0 || age > 120) {
+                throw new IllegalArgumentException("Invalid age: " + age + ". Age must be between 1 and 120.");
+            }
+            this.age = age;
+        } catch (IllegalArgumentException e) {
+            System.err.println("Validation Error in Passenger: " + e.getMessage() + " Defaulting age to 0.");
+            this.age = 0;
+        }
+
         this.passengerId = passengerId;
-        this.name = name;
-        this.age = age;
         this.gender = gender;
-        this.contactNumber = contactNumber;
     }
 
-    // Getters and Setters
+    private static String validateContactNumber(String contactNumber) {
+        try {
+            if (contactNumber == null || !contactNumber.matches("\\d{10}")) {
+                throw new IllegalArgumentException("Invalid contact number: " + contactNumber + ". Must be a 10-digit number.");
+            }
+            return contactNumber;
+        } catch (IllegalArgumentException e) {
+            System.err.println("Validation Error in Passenger: " + e.getMessage() + " Defaulting to \"0000000000\".");
+            return "0000000000";
+        }
+    }
+
+    @Override
+    public String getRole() {
+        return "Passenger";
+    }
+
     public String getPassengerId() {
         return passengerId;
     }
 
     public void setPassengerId(String passengerId) {
         this.passengerId = passengerId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getAge() {
@@ -55,23 +64,14 @@ public class Passenger {
         this.gender = gender;
     }
 
-    public String getContactNumber() {
-        return contactNumber;
-    }
-
-    public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
-    }
-
-    // For quick console testing/debugging in Review 1
     @Override
     public String toString() {
         return "Passenger{" +
                 "passengerId='" + passengerId + '\'' +
-                ", name='" + name + '\'' +
+                ", name='" + getName() + '\'' +
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
-                ", contactNumber='" + contactNumber + '\'' +
+                ", contactNumber='" + getContactNumber() + '\'' +
                 '}';
     }
 }

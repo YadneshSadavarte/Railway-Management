@@ -1,20 +1,14 @@
 package models;
 
-/**
- * Represents a booking ticket linking a Passenger to a Train journey.
- * Part of RailRoute PR 1/2/3 - Core Entity Modeling (Review 1).
- */
 public class Ticket {
 
-    // Instance variables
     private String ticketId;
     private String passengerId;
     private String trainId;
     private String seatNumber;
-    private String status; // e.g. "CONFIRMED", "WAITING", "CANCELLED"
+    private String status;
     private double fare;
 
-    // Constructor
     public Ticket(String ticketId, String passengerId, String trainId,
                   String seatNumber, String status, double fare) {
         this.ticketId = ticketId;
@@ -25,7 +19,6 @@ public class Ticket {
         this.fare = fare;
     }
 
-    // Getters and Setters
     public String getTicketId() {
         return ticketId;
     }
@@ -74,7 +67,6 @@ public class Ticket {
         this.fare = fare;
     }
 
-    // For quick console testing/debugging in Review 1
     @Override
     public String toString() {
         return "Ticket{" +

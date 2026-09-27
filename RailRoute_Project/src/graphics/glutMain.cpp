@@ -1,27 +1,109 @@
 #include "MapRenderer.h"
 #include <GL/glut.h>
+#include <iostream>
 
-// Single global instance - GLUT's callback functions (display, etc.)
-// must be plain C-style function pointers, so they can't be class methods.
-// Keeping one global renderer is the simplest way to bridge that gap for Review 1.
 MapRenderer mapRenderer;
 
-// Called by GLUT whenever the window needs to be redrawn.
 void display() {
-    glClear(GL_COLOR_BUFFER_BIT);   // clear the screen
+    glClear(GL_COLOR_BUFFER_BIT);
     glLoadIdentity();
 
-    mapRenderer.render();           // draw tracks + stations
+    mapRenderer.render();
 
     glFlush();
 }
 
-// Sets up the 2D coordinate system so glVertex2f(-1..1, -1..1) maps to the window.
+void keyboard(unsigned char key, int x, int y) {
+    const float panStep = 0.05f;
+    const float zoomInFactor = 1.1f;
+    const float zoomOutFactor = 0.9f;
+
+    switch (key) {
+        case 'w':
+        case 'W':
+            mapRenderer.pan(0.0f, panStep);
+            mapRenderer.printClippingStatus();
+            glutPostRedisplay();
+            break;
+        case 's':
+        case 'S':
+            mapRenderer.pan(0.0f, -panStep);
+            mapRenderer.printClippingStatus();
+            glutPostRedisplay();
+            break;
+        case 'a':
+        case 'A':
+            mapRenderer.pan(-panStep, 0.0f);
+            mapRenderer.printClippingStatus();
+            glutPostRedisplay();
+            break;
+        case 'd':
+        case 'D':
+            mapRenderer.pan(panStep, 0.0f);
+            mapRenderer.printClippingStatus();
+            glutPostRedisplay();
+            break;
+        case '+':
+        case '=':
+            mapRenderer.zoom(zoomInFactor);
+            mapRenderer.printClippingStatus();
+            glutPostRedisplay();
+            break;
+        case '-':
+        case '_':
+            mapRenderer.zoom(zoomOutFactor);
+            mapRenderer.printClippingStatus();
+            glutPostRedisplay();
+            break;
+        case 'r':
+        case 'R':
+            mapRenderer.resetView();
+            mapRenderer.printClippingStatus();
+            glutPostRedisplay();
+            break;
+        case 27:
+            exit(0);
+            break;
+        default:
+            break;
+    }
+}
+
+void specialKeys(int key, int x, int y) {
+    const float panStep = 0.05f;
+
+    switch (key) {
+        case GLUT_KEY_UP:
+            mapRenderer.pan(0.0f, panStep);
+            mapRenderer.printClippingStatus();
+            glutPostRedisplay();
+            break;
+        case GLUT_KEY_DOWN:
+            mapRenderer.pan(0.0f, -panStep);
+            mapRenderer.printClippingStatus();
+            glutPostRedisplay();
+            break;
+        case GLUT_KEY_LEFT:
+            mapRenderer.pan(-panStep, 0.0f);
+            mapRenderer.printClippingStatus();
+            glutPostRedisplay();
+            break;
+        case GLUT_KEY_RIGHT:
+            mapRenderer.pan(panStep, 0.0f);
+            mapRenderer.printClippingStatus();
+            glutPostRedisplay();
+            break;
+        default:
+            break;
+    }
+}
+
 void initOpenGL() {
-    glClearColor(0.945f, 0.961f, 0.973f, 1.0f); // Subtle Gray 1 (#F1F5F8) background, per Design.md
+    glClearColor(0.945f, 0.961f, 0.973f, 1.0f);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluOrtho2D(-1.0, 1.0, -1.0, 1.0); // simple 2D orthographic view, world space -1 to 1
+    gluOrtho2D(-1.0, 1.0, -1.0, 1.0);
+    glMatrixMode(GL_MODELVIEW);
 }
 
 int main(int argc, char** argv) {
@@ -35,6 +117,22 @@ int main(int argc, char** argv) {
     mapRenderer.loadHardcodedMap();
 
     glutDisplayFunc(display);
+    glutKeyboardFunc(keyboard);
+    glutSpecialFunc(specialKeys);
+
+    std::cout << "===================================================================\n";
+    std::cout << "  RailRoute Computer Graphics (Review 2 / Task 2)\n";
+    std::cout << "  CO3: Geometric Transformations (2D Pan & Zoom)\n";
+    std::cout << "  CO5: Viewport Line Clipping (Cohen-Sutherland Algorithm)\n";
+    std::cout << "===================================================================\n";
+    std::cout << "Controls:\n";
+    std::cout << "  [Arrow Keys] or [W/A/S/D] : Pan map (Translate)\n";
+    std::cout << "  [+] / [-]                : Zoom in / Zoom out (Scale: 0.5x - 3.0x)\n";
+    std::cout << "  [R]                      : Reset pan & zoom to default\n";
+    std::cout << "  [ESC]                    : Exit\n";
+
+    mapRenderer.printClippingStatus();
+
     glutMainLoop();
 
     return 0;

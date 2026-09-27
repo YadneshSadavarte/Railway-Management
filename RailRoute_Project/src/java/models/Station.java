@@ -1,18 +1,12 @@
 package models;
 
-/**
- * Represents a single railway station in the network.
- * Part of RailRoute PR 1/2/3 - Core Entity Modeling (Review 1).
- */
 public class Station {
 
-    // Instance variables
     private String stationId;
     private String stationName;
     private String city;
-    private double elevation; // in meters, used later by Operator analytics (Energy Score)
+    private double elevation;
 
-    // Constructor
     public Station(String stationId, String stationName, String city, double elevation) {
         this.stationId = stationId;
         this.stationName = stationName;
@@ -20,7 +14,6 @@ public class Station {
         this.elevation = elevation;
     }
 
-    // Getters and Setters
     public String getStationId() {
         return stationId;
     }
@@ -53,7 +46,6 @@ public class Station {
         this.elevation = elevation;
     }
 
-    // For quick console testing/debugging in Review 1
     @Override
     public String toString() {
         return "Station{" +

@@ -1,21 +1,15 @@
 package models;
 
-/**
- * Represents a single train in the railway network.
- * Part of RailRoute PR 1/2/3 - Core Entity Modeling (Review 1).
- */
 public class Train {
 
-    // Instance variables
     private String trainId;
     private String trainName;
     private String sourceStationId;
     private String destinationStationId;
     private int totalSeats;
     private int availableSeats;
-    private double departureTime; // stored as a simple 24hr float, e.g. 14.30 for Review 1 simplicity
+    private double departureTime;
 
-    // Constructor
     public Train(String trainId, String trainName, String sourceStationId,
                  String destinationStationId, int totalSeats, double departureTime) {
         this.trainId = trainId;
@@ -23,11 +17,10 @@ public class Train {
         this.sourceStationId = sourceStationId;
         this.destinationStationId = destinationStationId;
         this.totalSeats = totalSeats;
-        this.availableSeats = totalSeats; // all seats free when a train is first created
+        this.availableSeats = totalSeats;
         this.departureTime = departureTime;
     }
 
-    // Getters and Setters
     public String getTrainId() {
         return trainId;
     }
@@ -84,7 +77,6 @@ public class Train {
         this.departureTime = departureTime;
     }
 
-    // For quick console testing/debugging in Review 1
     @Override
     public String toString() {
         return "Train{" +

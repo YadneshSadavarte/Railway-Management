@@ -1,20 +1,13 @@
 package models;
 
-/**
- * Represents a route between two stations, carrying distance and time
- * data used later for Fastest vs. Shortest route comparison.
- * Part of RailRoute PR 1/2/3 - Core Entity Modeling (Review 1).
- */
 public class Route {
 
-    // Instance variables
     private String routeId;
     private String sourceStationId;
     private String destinationStationId;
-    private double distance;    // in kilometers
-    private double travelTime;  // in hours, Review 1 simplicity
+    private double distance;
+    private double travelTime;
 
-    // Constructor
     public Route(String routeId, String sourceStationId, String destinationStationId,
                  double distance, double travelTime) {
         this.routeId = routeId;
@@ -24,7 +17,6 @@ public class Route {
         this.travelTime = travelTime;
     }
 
-    // Getters and Setters
     public String getRouteId() {
         return routeId;
     }
@@ -65,7 +57,6 @@ public class Route {
         this.travelTime = travelTime;
     }
 
-    // For quick console testing/debugging in Review 1
     @Override
     public String toString() {
         return "Route{" +
