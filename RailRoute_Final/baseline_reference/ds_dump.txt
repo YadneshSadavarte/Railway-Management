@@ -1,0 +1,196 @@
+TRAIN_ARRAY_DUMP:
+========================================================================================
+                   CO1 & CO2: 1D TRAIN ARRAY INVENTORY (FIXED CAPACITY 60)              
+========================================================================================
+Total Active Records: 40 / 60
+Index  | Train ID | Train Name               | Route        | Seats   | Rate/Fare
+----------------------------------------------------------------------------------------
+[00]   | TRN101   | CSMT Solapur Vande Bharat | MH-013->MH-027 |   5/  5 | Rs.   2.40
+[01]   | TRN102   | Solapur CSMT Vande Bharat | MH-027->MH-013 |   5/  5 | Rs.   2.40
+[02]   | TRN103   | Mumbai Latur Solapur Exp | MH-013->MH-027 |   5/  5 | Rs.   1.80
+[03]   | TRN104   | Solapur Latur Mumbai Exp | MH-027->MH-013 |   5/  5 | Rs.   1.80
+[04]   | TRN105   | Maharashtra Express      | MH-031->MH-008 |   5/  5 | Rs.   1.80
+[05]   | TRN106   | Maharashtra Express Return | MH-008->MH-031 |   5/  5 | Rs.   1.80
+[06]   | TRN107   | Kolhapur Nagpur Express  | MH-031->MH-006 |   5/  5 | Rs.   1.80
+[07]   | TRN108   | Nagpur Kolhapur Express  | MH-006->MH-031 |   5/  5 | Rs.   1.80
+[08]   | TRN109   | Pune Amravati Express (Via ANG) | MH-014->MH-005 |   5/  5 | Rs.   1.80
+[09]   | TRN110   | Amravati Pune Express (Via ANG) | MH-005->MH-014 |   5/  5 | Rs.   1.80
+[10]   | TRN111   | Pune Amravati Marathwada Exp | MH-014->MH-006 |   5/  5 | Rs.   1.80
+[11]   | TRN112   | Amravati Pune Marathwada Exp | MH-006->MH-014 |   5/  5 | Rs.   1.80
+[12]   | TRN113   | Pune Nanded Express (Via Latur) | MH-014->MH-024 |   5/  5 | Rs.   1.80
+[13]   | TRN114   | Nanded Pune Express (Via Latur) | MH-024->MH-014 |   5/  5 | Rs.   1.80
+[14]   | TRN115   | Pune Nanded Express (Via AWB) | MH-014->MH-024 |   5/  5 | Rs.   1.80
+[15]   | TRN116   | Nanded Pune Express (Via AWB) | MH-024->MH-014 |   5/  5 | Rs.   1.80
+[16]   | TRN117   | Vidarbha SF Express      | MH-013->MH-008 |   5/  5 | Rs.   1.95
+[17]   | TRN118   | Vidarbha SF Express Return | MH-008->MH-013 |   5/  5 | Rs.   1.95
+[18]   | TRN119   | Bandra Khandesh Tapti Exp | MH-013->MH-006 |   5/  5 | Rs.   1.80
+[19]   | TRN120   | Khandesh Bandra Tapti Exp | MH-006->MH-013 |   5/  5 | Rs.   1.80
+[20]   | TRN121   | Nandigram Express (Via AWB-NED) | MH-013->MH-006 |   5/  5 | Rs.   1.80
+[21]   | TRN122   | Nandigram Express Return | MH-006->MH-013 |   5/  5 | Rs.   1.80
+[22]   | TRN123   | Mumbai Chandrapur SF Exp (Via AK) | MH-013->MH-022 |   5/  5 | Rs.   1.95
+[23]   | TRN124   | Chandrapur Mumbai SF Exp (Via AK) | MH-022->MH-013 |   5/  5 | Rs.   1.95
+[24]   | TRN125   | Mumbai Nanded Exp (Via Washim) | MH-013->MH-024 |   5/  5 | Rs.   1.80
+[25]   | TRN126   | Nanded Mumbai Exp (Via Washim) | MH-024->MH-013 |   5/  5 | Rs.   1.80
+[26]   | TRN127   | Khandesh Marathwada Exp (Via AWB) | MH-001->MH-024 |   5/  5 | Rs.   1.80
+[27]   | TRN128   | Marathwada Khandesh Exp (Via AWB) | MH-024->MH-001 |   5/  5 | Rs.   1.80
+[28]   | TRN129   | Tapi Washim Nanded SF Exp | MH-001->MH-024 |   5/  5 | Rs.   1.95
+[29]   | TRN130   | Nanded Washim Tapi SF Exp | MH-024->MH-001 |   5/  5 | Rs.   1.95
+[30]   | TRN131   | Mandovi Konkan Express   | MH-013->MH-032 |   5/  5 | Rs.   1.80
+[31]   | TRN132   | Mandovi Konkan Express Return | MH-032->MH-013 |   5/  5 | Rs.   1.80
+[32]   | TRN133   | CSMT Dhule Express (Via NK) | MH-013->MH-002 |   5/  5 | Rs.   1.80
+[33]   | TRN134   | Dhule CSMT Express (Via NK) | MH-002->MH-013 |   5/  5 | Rs.   1.80
+[34]   | TRN135   | Pune Ahilyanagar Beed Exp | MH-014->MH-016 |   5/  5 | Rs.   1.80
+[35]   | TRN136   | Beed Ahilyanagar Pune Exp | MH-016->MH-014 |   5/  5 | Rs.   1.80
+[36]   | TRN137   | Koyna Express            | MH-013->MH-031 |   5/  5 | Rs.   1.80
+[37]   | TRN138   | Koyna Express Return     | MH-031->MH-013 |   5/  5 | Rs.   1.80
+[38]   | TRN139   | Mumbai Solapur Sangli Satara Exp | MH-013->MH-028 |   5/  5 | Rs.   1.80
+[39]   | TRN140   | Satara Sangli Solapur Mumbai Exp | MH-028->MH-013 |   5/  5 | Rs.   1.80
+========================================================================================
+
+QUICKSORT_DUMP:
+========================================================================================
+                   CO5: QUICKSORT ON 1D ARRAY BY FARE (ASCENDING)                       
+========================================================================================
+Index  | Train ID | Train Name               | Route        | Seats   | Rate/Fare
+----------------------------------------------------------------------------------------
+[00]   | TRN103   | Mumbai Latur Solapur Exp | MH-013->MH-027 |   5/  5 | Rs.   1.80
+[01]   | TRN104   | Solapur Latur Mumbai Exp | MH-027->MH-013 |   5/  5 | Rs.   1.80
+[02]   | TRN105   | Maharashtra Express      | MH-031->MH-008 |   5/  5 | Rs.   1.80
+[03]   | TRN106   | Maharashtra Express Return | MH-008->MH-031 |   5/  5 | Rs.   1.80
+[04]   | TRN107   | Kolhapur Nagpur Express  | MH-031->MH-006 |   5/  5 | Rs.   1.80
+[05]   | TRN108   | Nagpur Kolhapur Express  | MH-006->MH-031 |   5/  5 | Rs.   1.80
+[06]   | TRN109   | Pune Amravati Express (Via ANG) | MH-014->MH-005 |   5/  5 | Rs.   1.80
+[07]   | TRN110   | Amravati Pune Express (Via ANG) | MH-005->MH-014 |   5/  5 | Rs.   1.80
+[08]   | TRN111   | Pune Amravati Marathwada Exp | MH-014->MH-006 |   5/  5 | Rs.   1.80
+[09]   | TRN112   | Amravati Pune Marathwada Exp | MH-006->MH-014 |   5/  5 | Rs.   1.80
+[10]   | TRN113   | Pune Nanded Express (Via Latur) | MH-014->MH-024 |   5/  5 | Rs.   1.80
+[11]   | TRN114   | Nanded Pune Express (Via Latur) | MH-024->MH-014 |   5/  5 | Rs.   1.80
+[12]   | TRN115   | Pune Nanded Express (Via AWB) | MH-014->MH-024 |   5/  5 | Rs.   1.80
+[13]   | TRN116   | Nanded Pune Express (Via AWB) | MH-024->MH-014 |   5/  5 | Rs.   1.80
+[14]   | TRN119   | Bandra Khandesh Tapti Exp | MH-013->MH-006 |   5/  5 | Rs.   1.80
+[15]   | TRN120   | Khandesh Bandra Tapti Exp | MH-006->MH-013 |   5/  5 | Rs.   1.80
+[16]   | TRN121   | Nandigram Express (Via AWB-NED) | MH-013->MH-006 |   5/  5 | Rs.   1.80
+[17]   | TRN122   | Nandigram Express Return | MH-006->MH-013 |   5/  5 | Rs.   1.80
+[18]   | TRN125   | Mumbai Nanded Exp (Via Washim) | MH-013->MH-024 |   5/  5 | Rs.   1.80
+[19]   | TRN126   | Nanded Mumbai Exp (Via Washim) | MH-024->MH-013 |   5/  5 | Rs.   1.80
+[20]   | TRN127   | Khandesh Marathwada Exp (Via AWB) | MH-001->MH-024 |   5/  5 | Rs.   1.80
+[21]   | TRN128   | Marathwada Khandesh Exp (Via AWB) | MH-024->MH-001 |   5/  5 | Rs.   1.80
+[22]   | TRN131   | Mandovi Konkan Express   | MH-013->MH-032 |   5/  5 | Rs.   1.80
+[23]   | TRN132   | Mandovi Konkan Express Return | MH-032->MH-013 |   5/  5 | Rs.   1.80
+[24]   | TRN133   | CSMT Dhule Express (Via NK) | MH-013->MH-002 |   5/  5 | Rs.   1.80
+[25]   | TRN134   | Dhule CSMT Express (Via NK) | MH-002->MH-013 |   5/  5 | Rs.   1.80
+[26]   | TRN135   | Pune Ahilyanagar Beed Exp | MH-014->MH-016 |   5/  5 | Rs.   1.80
+[27]   | TRN136   | Beed Ahilyanagar Pune Exp | MH-016->MH-014 |   5/  5 | Rs.   1.80
+[28]   | TRN137   | Koyna Express            | MH-013->MH-031 |   5/  5 | Rs.   1.80
+[29]   | TRN138   | Koyna Express Return     | MH-031->MH-013 |   5/  5 | Rs.   1.80
+[30]   | TRN139   | Mumbai Solapur Sangli Satara Exp | MH-013->MH-028 |   5/  5 | Rs.   1.80
+[31]   | TRN140   | Satara Sangli Solapur Mumbai Exp | MH-028->MH-013 |   5/  5 | Rs.   1.80
+[32]   | TRN117   | Vidarbha SF Express      | MH-013->MH-008 |   5/  5 | Rs.   1.95
+[33]   | TRN118   | Vidarbha SF Express Return | MH-008->MH-013 |   5/  5 | Rs.   1.95
+[34]   | TRN129   | Tapi Washim Nanded SF Exp | MH-001->MH-024 |   5/  5 | Rs.   1.95
+[35]   | TRN130   | Nanded Washim Tapi SF Exp | MH-024->MH-001 |   5/  5 | Rs.   1.95
+[36]   | TRN123   | Mumbai Chandrapur SF Exp (Via AK) | MH-013->MH-022 |   5/  5 | Rs.   1.95
+[37]   | TRN124   | Chandrapur Mumbai SF Exp (Via AK) | MH-022->MH-013 |   5/  5 | Rs.   1.95
+[38]   | TRN101   | CSMT Solapur Vande Bharat | MH-013->MH-027 |   5/  5 | Rs.   2.40
+[39]   | TRN102   | Solapur CSMT Vande Bharat | MH-027->MH-013 |   5/  5 | Rs.   2.40
+========================================================================================
+
+TRAIN_LL_DUMP:
+========================================================================================
+                   CO3: TRAIN SINGLY LINKED LIST INVENTORY (DYNAMIC CRUD)               
+========================================================================================
+Node     | Train ID | Train Name           | Route        | Seats   | Base Fare
+----------------------------------------------------------------------------------------
+Node #1   | TRN101   | CSMT Solapur Vande Bharat | MH-013->MH-027 |   5/  5 | Rs.   2.40
+Node #2   | TRN102   | Solapur CSMT Vande Bharat | MH-027->MH-013 |   5/  5 | Rs.   2.40
+Node #3   | TRN103   | Mumbai Latur Solapur Exp | MH-013->MH-027 |   5/  5 | Rs.   1.80
+Node #4   | TRN104   | Solapur Latur Mumbai Exp | MH-027->MH-013 |   5/  5 | Rs.   1.80
+Node #5   | TRN105   | Maharashtra Express  | MH-031->MH-008 |   5/  5 | Rs.   1.80
+Node #6   | TRN106   | Maharashtra Express Return | MH-008->MH-031 |   5/  5 | Rs.   1.80
+Node #7   | TRN107   | Kolhapur Nagpur Express | MH-031->MH-006 |   5/  5 | Rs.   1.80
+Node #8   | TRN108   | Nagpur Kolhapur Express | MH-006->MH-031 |   5/  5 | Rs.   1.80
+Node #9   | TRN109   | Pune Amravati Express (Via ANG) | MH-014->MH-005 |   5/  5 | Rs.   1.80
+Node #10  | TRN110   | Amravati Pune Express (Via ANG) | MH-005->MH-014 |   5/  5 | Rs.   1.80
+Node #11  | TRN111   | Pune Amravati Marathwada Exp | MH-014->MH-006 |   5/  5 | Rs.   1.80
+Node #12  | TRN112   | Amravati Pune Marathwada Exp | MH-006->MH-014 |   5/  5 | Rs.   1.80
+Node #13  | TRN113   | Pune Nanded Express (Via Latur) | MH-014->MH-024 |   5/  5 | Rs.   1.80
+Node #14  | TRN114   | Nanded Pune Express (Via Latur) | MH-024->MH-014 |   5/  5 | Rs.   1.80
+Node #15  | TRN115   | Pune Nanded Express (Via AWB) | MH-014->MH-024 |   5/  5 | Rs.   1.80
+Node #16  | TRN116   | Nanded Pune Express (Via AWB) | MH-024->MH-014 |   5/  5 | Rs.   1.80
+Node #17  | TRN117   | Vidarbha SF Express  | MH-013->MH-008 |   5/  5 | Rs.   1.95
+Node #18  | TRN118   | Vidarbha SF Express Return | MH-008->MH-013 |   5/  5 | Rs.   1.95
+Node #19  | TRN119   | Bandra Khandesh Tapti Exp | MH-013->MH-006 |   5/  5 | Rs.   1.80
+Node #20  | TRN120   | Khandesh Bandra Tapti Exp | MH-006->MH-013 |   5/  5 | Rs.   1.80
+Node #21  | TRN121   | Nandigram Express (Via AWB-NED) | MH-013->MH-006 |   5/  5 | Rs.   1.80
+Node #22  | TRN122   | Nandigram Express Return | MH-006->MH-013 |   5/  5 | Rs.   1.80
+Node #23  | TRN123   | Mumbai Chandrapur SF Exp (Via AK) | MH-013->MH-022 |   5/  5 | Rs.   1.95
+Node #24  | TRN124   | Chandrapur Mumbai SF Exp (Via AK) | MH-022->MH-013 |   5/  5 | Rs.   1.95
+Node #25  | TRN125   | Mumbai Nanded Exp (Via Washim) | MH-013->MH-024 |   5/  5 | Rs.   1.80
+Node #26  | TRN126   | Nanded Mumbai Exp (Via Washim) | MH-024->MH-013 |   5/  5 | Rs.   1.80
+Node #27  | TRN127   | Khandesh Marathwada Exp (Via AWB) | MH-001->MH-024 |   5/  5 | Rs.   1.80
+Node #28  | TRN128   | Marathwada Khandesh Exp (Via AWB) | MH-024->MH-001 |   5/  5 | Rs.   1.80
+Node #29  | TRN129   | Tapi Washim Nanded SF Exp | MH-001->MH-024 |   5/  5 | Rs.   1.95
+Node #30  | TRN130   | Nanded Washim Tapi SF Exp | MH-024->MH-001 |   5/  5 | Rs.   1.95
+Node #31  | TRN131   | Mandovi Konkan Express | MH-013->MH-032 |   5/  5 | Rs.   1.80
+Node #32  | TRN132   | Mandovi Konkan Express Return | MH-032->MH-013 |   5/  5 | Rs.   1.80
+Node #33  | TRN133   | CSMT Dhule Express (Via NK) | MH-013->MH-002 |   5/  5 | Rs.   1.80
+Node #34  | TRN134   | Dhule CSMT Express (Via NK) | MH-002->MH-013 |   5/  5 | Rs.   1.80
+Node #35  | TRN135   | Pune Ahilyanagar Beed Exp | MH-014->MH-016 |   5/  5 | Rs.   1.80
+Node #36  | TRN136   | Beed Ahilyanagar Pune Exp | MH-016->MH-014 |   5/  5 | Rs.   1.80
+Node #37  | TRN137   | Koyna Express        | MH-013->MH-031 |   5/  5 | Rs.   1.80
+Node #38  | TRN138   | Koyna Express Return | MH-031->MH-013 |   5/  5 | Rs.   1.80
+Node #39  | TRN139   | Mumbai Solapur Sangli Satara Exp | MH-013->MH-028 |   5/  5 | Rs.   1.80
+Node #40  | TRN140   | Satara Sangli Solapur Mumbai Exp | MH-028->MH-013 |   5/  5 | Rs.   1.80
+----------------------------------------------------------------------------------------
+Visual Traversal: head -> [TRN101] -> [TRN102] -> [TRN103] -> [TRN104] -> [TRN105] -> [TRN106] -> [TRN107] -> [TRN108] -> [TRN109] -> [TRN110] -> [TRN111] -> [TRN112] -> [TRN113] -> [TRN114] -> [TRN115] -> [TRN116] -> [TRN117] -> [TRN118] -> [TRN119] -> [TRN120] -> [TRN121] -> [TRN122] -> [TRN123] -> [TRN124] -> [TRN125] -> [TRN126] -> [TRN127] -> [TRN128] -> [TRN129] -> [TRN130] -> [TRN131] -> [TRN132] -> [TRN133] -> [TRN134] -> [TRN135] -> [TRN136] -> [TRN137] -> [TRN138] -> [TRN139] -> [TRN140] -> NULL
+========================================================================================
+
+SEARCH_DUMP:
+Train ID 'TR01' not found in Singly Linked List.
+HASH_TABLE_DUMP:
+========================================================================================
+          CO6: TICKET HASH TABLE (SEPARATE CHAINING, TABLE SIZE 13)                    
+========================================================================================
+Bucket [00]: EMPTY
+Bucket [01]: EMPTY
+Bucket [02]: EMPTY
+Bucket [03]: EMPTY
+Bucket [04]: EMPTY
+Bucket [05]: [TKT001] -> NULL
+Bucket [06]: EMPTY
+Bucket [07]: EMPTY
+Bucket [08]: EMPTY
+Bucket [09]: EMPTY
+Bucket [10]: EMPTY
+Bucket [11]: EMPTY
+Bucket [12]: EMPTY
+----------------------------------------------------------------------------------------
+Total Stored Tickets: 1 | Prime Table Modulo: 13 | Load Factor: 0.08
+========================================================================================
+
+HASH_GET_DUMP:
+O(1) HASH TABLE LOOKUP SUCCESS:
+ - Hash Bucket:      [5] of 13
+ - Collision Depth:  Node #1 in chain
+ - Ticket ID:        TKT001
+ - Summary:          PAX001 | Aarav | PUNE -> CSMT | Rs. 150.0
+QUEUE_DUMP:
+========================================================================================
+            CO4: CIRCULAR QUEUE WAITING LIST BUFFER (CAPACITY 15)                       
+========================================================================================
+Current Queue Size: 1 / 15  |  Front Index: 0  |  Rear Index: 0
+Pos    | Passenger ID | Passenger Name       | Train ID   | Fare     
+----------------------------------------------------------------------------------------
+WL-01  | P01          | Rohan                | TR01       | Rs. 150.00
+========================================================================================
+
+STACK_DUMP:
+========================================================================================
+            CO4: LIFO CANCELLATION REFUND BUFFER STACK (CAPACITY 25)                    
+========================================================================================
+Current Stack Size: 1 / 25  |  Top Pointer Index: 0
+Pos    | Ticket ID    | Passenger ID | Train ID   | Fare     
+----------------------------------------------------------------------------------------
+[00]   | TKT001       | P01          | TR01       | Rs. 150.00 <- TOP
+========================================================================================
+

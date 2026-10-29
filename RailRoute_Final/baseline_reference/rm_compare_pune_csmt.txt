@@ -1,0 +1,27 @@
+========================================================================================
+   REAL OPERATIONAL RAILWAY CORRIDOR & FARE COMPARATOR (INDIAN RAILWAYS TIMETABLE)      
+========================================================================================
+Origin Station:      Pune Junction            (PUNE, 559.0 m)
+Destination Station: Mumbai CSMT              (CSMT, 8.0 m)
+Travel Class:        Sleeper Class (SL)
+----------------------------------------------------------------------------------------
+
+STATUS: ONLY 1 OPERATIONAL RAILWAY ROUTE AVAILABLE IN PRACTICE
+Notice: All passenger trains serving this corridor follow this single dedicated route.
+
+1. DEDICATED OPERATIONAL ROUTE:
+   Path: PUNE --(159km)--> TNA --(33km)--> CSMT
+   Distance:     192 km (192000 meters)
+   Travel Time:  3.0 hours
+   Max Altitude: 559.0 m
+   Segment Fare: Rs. 500.80
+   Operating Services:
+     - 22226 Solapur CSMT Vande Bharat
+     - 11304 Solapur Latur Mumbai Exp
+     - 11030 Koyna Express Return
+     - 11028 Satara Sangli Solapur Mumbai Exp
+
+========================================================================================
+Observation: Zero alternative detour routes exist in real operational passenger schedules.
+OpenGL Telemetry: Single dedicated route exported to 'data/active_route.txt'.
+========================================================================================

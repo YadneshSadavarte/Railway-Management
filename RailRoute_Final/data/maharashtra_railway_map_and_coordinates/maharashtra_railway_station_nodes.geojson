@@ -1,0 +1,614 @@
+{
+  "type": "FeatureCollection",
+  "name": "Maharashtra railway station nodes from reference map labels",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.246482,
+          21.374812
+        ]
+      },
+      "properties": {
+        "station_id": "MH-001",
+        "map_label": "Nandurbar",
+        "station_name": "Nandurbar",
+        "station_code": "NDB",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.768847,
+          20.887752
+        ]
+      },
+      "properties": {
+        "station_id": "MH-002",
+        "map_label": "Dhule",
+        "station_name": "Dhule",
+        "station_code": "DHI",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.562875,
+          21.018115
+        ]
+      },
+      "properties": {
+        "station_id": "MH-003",
+        "map_label": "Jalgaon",
+        "station_name": "Jalgaon Junction",
+        "station_code": "JL",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.005497,
+          20.723084
+        ]
+      },
+      "properties": {
+        "station_id": "MH-004",
+        "map_label": "Akola",
+        "station_name": "Akola Junction",
+        "station_code": "AK",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.7577863,
+          20.9300829
+        ]
+      },
+      "properties": {
+        "station_id": "MH-005",
+        "map_label": "Amravati",
+        "station_name": "Amravati",
+        "station_code": "AMI",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.089004,
+          21.153567
+        ]
+      },
+      "properties": {
+        "station_id": "MH-006",
+        "map_label": "Nagpur",
+        "station_name": "Nagpur",
+        "station_code": "NGP",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.647523,
+          21.238512
+        ]
+      },
+      "properties": {
+        "station_id": "MH-007",
+        "map_label": "Bhandara",
+        "station_name": "Bhandara Road",
+        "station_code": "BRD",
+        "coordinate_source_url": "https://en.wikipedia.org/wiki/Bhandara_Road_railway_station",
+        "status_note": "Actual railway station is Bhandara Road at Warthi, not in Bhandara town centre.",
+        "notes": "For a district-HQ label, use the separate Bhandara city marker in the Map Labels sheet."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.190842,
+          21.462435
+        ]
+      },
+      "properties": {
+        "station_id": "MH-008",
+        "map_label": "Gondia",
+        "station_name": "Gondia Junction",
+        "station_code": "G",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8421,
+          19.9472
+        ]
+      },
+      "properties": {
+        "station_id": "MH-009",
+        "map_label": "Nashik",
+        "station_name": "Nashik Road",
+        "station_code": "NK",
+        "coordinate_source_url": "https://en.wikipedia.org/wiki/Nasik_Road_railway_station",
+        "status_note": "Nashik Road is the main railway station serving Nashik; the station is outside the city centre.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.77248,
+          19.698038
+        ]
+      },
+      "properties": {
+        "station_id": "MH-010",
+        "map_label": "Palghar",
+        "station_name": "Palghar",
+        "station_code": "PLG",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.975417,
+          19.185757
+        ]
+      },
+      "properties": {
+        "station_id": "MH-011",
+        "map_label": "Thane",
+        "station_name": "Thane",
+        "station_code": "TNA",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84045439,
+          19.05445443
+        ]
+      },
+      "properties": {
+        "station_id": "MH-012",
+        "map_label": "Bandra",
+        "station_name": "Bandra",
+        "station_code": "BA",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8357856,
+          18.9404925
+        ]
+      },
+      "properties": {
+        "station_id": "MH-013",
+        "map_label": "Mumbai",
+        "station_name": "Mumbai CSMT",
+        "station_code": "CSMT",
+        "coordinate_source_url": "https://mcgm.svs.io/facilities/89",
+        "status_note": "Coordinates are for CSMT, chosen as the explicit Mumbai station node; Mumbai has multiple major terminals.",
+        "notes": "Choose a different terminal when your route calls for Mumbai Central (MMCT), Bandra Terminus (BDTS), etc."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.873086,
+          18.529378
+        ]
+      },
+      "properties": {
+        "station_id": "MH-014",
+        "map_label": "Pune",
+        "station_name": "Pune Junction",
+        "station_code": "PUNE",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7217,
+          19.0753
+        ]
+      },
+      "properties": {
+        "station_id": "MH-015",
+        "map_label": "Ahilyanagar (Ahmednagar)",
+        "station_name": "Ahilyanagar",
+        "station_code": "ANG",
+        "coordinate_source_url": "https://www.railopedia.com/stations/ahmednagar",
+        "status_note": "Active station; the station/city name is now Ahilyanagar. Verify names and codes against the live provider.",
+        "notes": "The source map uses the older name Ahmednagar."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.73437,
+          18.972241
+        ]
+      },
+      "properties": {
+        "station_id": "MH-016",
+        "map_label": "Beed",
+        "station_name": "Beed",
+        "station_code": "BEED",
+        "coordinate_source_url": "https://en.wikipedia.org/wiki/Beed_railway_station",
+        "status_note": "Opened 17 Sep 2025; Beed–Pune service began in Sep 2026. Confirm current timetable with the official provider.",
+        "notes": "Not present as an active station on the 2015 reference map."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.310646,
+          19.859276
+        ]
+      },
+      "properties": {
+        "station_id": "MH-017",
+        "map_label": "Aurangabad",
+        "station_name": "Chhatrapati Sambhajinagar (legacy station listing: Aurangabad)",
+        "station_code": "AWB",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Coordinates from the station dataset under the legacy name Aurangabad; verify current station name/code in your API.",
+        "notes": "The city was renamed Chhatrapati Sambhajinagar; map label is Aurangabad."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.893142,
+          19.830781
+        ]
+      },
+      "properties": {
+        "station_id": "MH-018",
+        "map_label": "Jalna",
+        "station_name": "Jalna",
+        "station_code": "J",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.147986,
+          20.103101
+        ]
+      },
+      "properties": {
+        "station_id": "MH-019",
+        "map_label": "Washim",
+        "station_name": "Washim",
+        "station_code": "WHM",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.146758,
+          19.726357
+        ]
+      },
+      "properties": {
+        "station_id": "MH-020",
+        "map_label": "Hingoli",
+        "station_name": "Hingoli Deccan",
+        "station_code": "HNL",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.594157,
+          20.732777
+        ]
+      },
+      "properties": {
+        "station_id": "MH-021",
+        "map_label": "Wardha",
+        "station_name": "Wardha Junction",
+        "station_code": "WR",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.300505,
+          19.960126
+        ]
+      },
+      "properties": {
+        "station_id": "MH-022",
+        "map_label": "Chandrapur",
+        "station_name": "Chandrapur",
+        "station_code": "CD",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.774119,
+          19.25746
+        ]
+      },
+      "properties": {
+        "station_id": "MH-023",
+        "map_label": "Parbhani",
+        "station_name": "Parbhani Junction",
+        "station_code": "PBN",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.310478,
+          19.160522
+        ]
+      },
+      "properties": {
+        "station_id": "MH-024",
+        "map_label": "Nanded",
+        "station_name": "Huzur Sahib Nanded",
+        "station_code": "NED",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.556049,
+          18.429166
+        ]
+      },
+      "properties": {
+        "station_id": "MH-025",
+        "map_label": "Latur",
+        "station_name": "Latur",
+        "station_code": "LUR",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.022663,
+          18.248154
+        ]
+      },
+      "properties": {
+        "station_id": "MH-026",
+        "map_label": "Osmanabad / Dharashiv",
+        "station_name": "Usmanabad (legacy station listing; serves Dharashiv region)",
+        "station_code": "UMD",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Coordinate/name from legacy station listing; confirm current station code and exact terminal identity before production use.",
+        "notes": "Rail station coordinate is not the same as the city-centre coordinate."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.893401,
+          17.664496
+        ]
+      },
+      "properties": {
+        "station_id": "MH-027",
+        "map_label": "Solapur",
+        "station_name": "Solapur Junction",
+        "station_code": "SUR",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.063727,
+          17.688361
+        ]
+      },
+      "properties": {
+        "station_id": "MH-028",
+        "map_label": "Satara",
+        "station_name": "Satara",
+        "station_code": "STR",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.356938,
+          17.002793
+        ]
+      },
+      "properties": {
+        "station_id": "MH-029",
+        "map_label": "Ratnagiri",
+        "station_name": "Ratnagiri",
+        "station_code": "RN",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.588939,
+          16.858669
+        ]
+      },
+      "properties": {
+        "station_id": "MH-030",
+        "map_label": "Sangli",
+        "station_name": "Sangli",
+        "station_code": "SLI",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.237695,
+          16.70257
+        ]
+      },
+      "properties": {
+        "station_id": "MH-031",
+        "map_label": "Kolhapur",
+        "station_name": "Chhatrapati Shahu Maharaj Terminus Kolhapur",
+        "station_code": "KOP",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.67813,
+          16.017651
+        ]
+      },
+      "properties": {
+        "station_id": "MH-032",
+        "map_label": "Kudal",
+        "station_name": "Kudal",
+        "station_code": "KUDL",
+        "coordinate_source_url": "https://raw.githubusercontent.com/prasenjit-27/Indian-Railway-Data/main/stations.json",
+        "status_note": "Station coordinates from the referenced open station dataset; validate the code against your live data provider before production.",
+        "notes": ""
+      }
+    }
+  ]
+}

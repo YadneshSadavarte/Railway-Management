@@ -1,0 +1,9 @@
+========================================================================================
+                  SQLITE ENTERPRISE DATABASE SUMMARY (railroute.db)                     
+========================================================================================
+Stations:      32   records (32 Verified Maharashtra Junctions)
+Track Edges:   90   records (100% Connected Bidirectional Railway Network)
+Trains:        40   records (40 Real Operational Indian Railways Services)
+Passengers:    0    records registered in SQLite
+Tickets:       2    records booked in SQLite
+========================================================================================

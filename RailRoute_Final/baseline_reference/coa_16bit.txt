@@ -1,0 +1,60 @@
+========================================================================================
+   COA CO1 & CO2: 16-BIT 8086 MICROPROCESSOR PIPELINE & REGISTER TRANSFER SIMULATION   
+   Task 1: Pune -> Mumbai Rail Legs Addition & Alternative Route Comparison            
+========================================================================================
+
+1. MEMORY DATA SEGMENT ALLOCATION (WORD / 16-BIT):
+   [DS:0x1000] leg1_pune_lonavala  = 64  km (0x0040)
+   [DS:0x1002] leg2_lonavala_kalyan = 74  km (0x004A)
+   [DS:0x1004] leg3_kalyan_mumbai  = 54  km (0x0036)
+   [DS:0x1006] total_distance_km   = 0   km (0x0000)
+   [DS:0x1008] alt_route_distance  = 375 km (0x0177)
+
+2. CONTROL UNIT FETCH-DECODE-EXECUTE MICRO-OPERATIONS & BUS TRANSFERS:
+   ------------------------------------------------------------------------------------
+   T-State | Micro-Operations Performed                 | Bus Transfer / Internal State
+   ------------------------------------------------------------------------------------
+   T1-T4   | Cycle 1: MOV AX, [leg1_pune_lonavala]      | MAR <- 0x1000, MBR <- M[MAR]
+           | IR <- MBR, IP <- IP + 2                    | AX <- 0x0040 (64 km)
+   T5-T8   | Cycle 2: MOV BX, [leg2_lonavala_kalyan]    | MAR <- 0x1002, MBR <- M[MAR]
+           | IR <- MBR, IP <- IP + 2                    | BX <- 0x004A (74 km)
+   T9-T12  | Cycle 3: ADD AX, BX                        | ALU Input: AX (64) + BX (74)
+           | Temp <- AX + BX, AX <- Temp                | AX <- 0x008A (138 km)
+           | Flags: ZF=0, CF=0, SF=0, OF=0, PF=0        | Status: No Carry, Non-Zero
+   T13-T16 | Cycle 4: MOV CX, [leg3_kalyan_mumbai]      | MAR <- 0x1004, MBR <- M[MAR]
+           | IR <- MBR, IP <- IP + 2                    | CX <- 0x0036 (54 km)
+   T17-T20 | Cycle 5: ADD AX, CX                        | ALU Input: AX (138) + CX (54)
+           | Temp <- AX + CX, AX <- Temp                | AX <- 0x00C0 (192 km)
+           | Flags: ZF=0, CF=0, SF=0, OF=0, PF=1        | Status: No Carry, Even Parity
+   T21-T24 | Cycle 6: MOV [total_distance_km], AX       | MAR <- 0x1006, MBR <- AX (0x00C0)
+           | M[MAR] <- MBR, IP <- IP + 2                | Memory Location Updated
+   T25-T28 | Cycle 7: MOV DX, [alt_route_distance]      | MAR <- 0x1008, MBR <- M[MAR]
+           | IR <- MBR, IP <- IP + 2                    | DX <- 0x0177 (375 km)
+   T29-T32 | Cycle 8: CMP AX, DX                        | ALU Subtraction: 192 - 375 = -183
+           | Discard Result, Retain Flags               | Flags: ZF=0, CF=1, SF=1, OF=0
+   ------------------------------------------------------------------------------------
+
+3. 16-BIT GENERAL PURPOSE REGISTER DUMP:
+   AX (Accumulator)  :    192 (Decimal) | 0x00C0 (16-Bit Hex) [Pune-Mumbai Shortest Sum]
+   BX (Base Reg)     :     74 (Decimal) | 0x004A (16-Bit Hex) [Lonavala-Kalyan Leg]
+   CX (Count Reg)    :     54 (Decimal) | 0x0036 (16-Bit Hex) [Kalyan-Mumbai Leg]
+   DX (Data Reg)     :    375 (Decimal) | 0x0177 (16-Bit Hex) [Alternative Route]
+   IP (Instr Pointer): 0x0114
+   SP (Stack Pointer): 0xFFFE
+
+4. ALU STATUS FLAGS REGISTER AFTER CMP AX, DX:
+   +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+   | -- | -- | -- | -- | OF | DF | IF | TF | SF | ZF | -- | AF | -- | PF | -- | CF |
+   |  0 |  0 |  0 |  0 |  0 |  0 |  1 |  0 |  1 |  0 |  0 |  1 |  0 |  1 |  0 |  1 |
+   +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+   - CF = 1 (Carry/Borrow: 192 < 375 generates unsigned borrow)
+   - ZF = 0 (Zero Flag: Result -183 is non-zero, routes are not equal)
+   - SF = 1 (Sign Flag: Most Significant Bit set, negative signed difference)
+   - OF = 0 (Overflow Flag: No 16-bit 2's complement overflow occurred)
+   - PF = 1 (Parity Flag: Even number of 1-bits in lower 8 bits of ALU result)
+
+5. CONDITIONAL BRANCHING VERDICT:
+   Evaluating 'JL' (Jump if Less, SF != OF): (1 != 0) = TRUE
+   Evaluating 'JB' (Jump if Below, CF == 1): (1 == 1) = TRUE
+   Hardware Verdict: Shortest Route AX (192 km) is confirmed strictly smaller than DX (375 km).
+========================================================================================

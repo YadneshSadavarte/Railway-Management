@@ -1,0 +1,35 @@
+========================================================================================
+   REAL OPERATIONAL RAILWAY CORRIDOR & FARE COMPARATOR (INDIAN RAILWAYS TIMETABLE)      
+========================================================================================
+Origin Station:      Pune Junction            (PUNE, 559.0 m)
+Destination Station: Amravati                 (AMI, 500.0 m)
+Travel Class:        AC Chair Car (CC)
+----------------------------------------------------------------------------------------
+
+1. SHORTEST OPERATIONAL ROUTE (OPTIMAL DIRECT CORRIDOR):
+   Path: PUNE --(154km)--> ANG --(312km)--> JL --(164km)--> AK --(88km)--> AMI
+   Distance:     719 km (719000 meters)
+   Travel Time:  12.7 hours
+   Max Altitude: 559.0 m (Elevation Delta: 59.0 m)
+   Segment Fare: Rs. 2324.85
+   Operating Services:
+     - 11039 Maharashtra Express
+     - 11025 Pune Amravati Express (Via ANG)
+
+2. LONGEST OPERATIONAL ROUTE (ALTERNATIVE SCENIC CORRIDOR):
+   Path: PUNE --(258km)--> UMD --(89km)--> LUR --(159km)--> PBN --(108km)--> HNL --(47km)--> WHM --(79km)--> AK --(88km)--> AMI
+   Distance:     832 km (832000 meters)
+   Travel Time:  15.5 hours
+   Max Altitude: 559.0 m
+   Segment Fare: Rs. 2680.80
+   Operating Services:
+     - 11405 Pune Amravati Marathwada Exp
+
+========================================================================================
+                    NET PASSENGER SAVINGS & OPTIMIZATION METRICS                        
+========================================================================================
+Distance Saved:  113 km (Reduced by 13.6%)
+Time Saved:      2.8 hours
+Fare Saved:      Rs. 355.95 per passenger
+OpenGL Telemetry: Both corridors synchronized to 'data/active_route.txt' for 2D animation.
+========================================================================================

@@ -1,15 +1,31 @@
-# Java compilation output
-/out/
+# Build & Binary Outputs
+build/
+bin/
+out/
+target/
 *.class
+*.exe
+*.obj
+*.o
+*.old
+*.tmp
+*.log
 
-# IDE and Editor configurations
+# Generated Test Outputs
+**/baseline_outputs/
+
+# IDE & Editor Configurations
 .idea/
+.vscode/
 *.iml
 .classpath
 .project
 .settings/
-.vscode/
 *.suo
 *.user
 *.userossc
 *.sln
+
+# Archives & Temporary
+*.zip
+*.bak

@@ -1,0 +1,52 @@
+========================================================================================
+   COA CO2, CO3 & CO4: 64-BIT WIN64 REGISTER & ALU LIVE ROUTE EXECUTION TRACE          
+========================================================================================
+Origin Station:      PUNE
+Destination Station: AMI
+Architecture Model:  x86-64 / AMD64 (64-Bit Quadword Addressing & Arithmetic)
+----------------------------------------------------------------------------------------
+
+1. ROUTE TOPOLOGY & METER CONVERSION:
+   ROUTE A (Shortest / Optimal Path):
+   - Sequence: PUNE -> ANG -> JL -> AK -> AMI
+   - Total Kilometers : 719 km
+   - 64-Bit Meters    : 719000 meters
+   - Peak Station Elev: 559.0 meters (Gradient Index: 15)
+
+   ROUTE B (Longest / Alternative Scenic Path):
+   - Sequence: PUNE -> UMD -> LUR -> PBN -> HNL -> WHM -> AK -> AMI
+   - Total Kilometers : 832 km
+   - 64-Bit Meters    : 832000 meters
+   - Peak Station Elev: 559.0 meters (Gradient Index: 15)
+
+2. 64-BIT GENERAL PURPOSE REGISTER DUMP (QUADWORDS):
+   RAX (Route A Meters)      :       719000 | 0x00000000000AF898
+   RBX (Route B Meters)      :       832000 | 0x00000000000CB200
+   RCX (Delta / SUB Result)  :       113000 | 0x000000000001B968
+   RDX (Data / Remainder Reg):            0 | 0x0000000000000000
+   R8  (Energy Score Route A):     10785000 | 0x0000000000A490E8
+   R9  (Energy Score Route B):     12480000 | 0x0000000000BE6E00
+   RSP (Stack Pointer)       :  Win64 Stack | 0x000000000019FF40
+   RIP (Instruction Pointer) : Code Segment | 0x00007FF71A4011B8
+
+3. ALU FLAGS & 64-BIT CONDITIONAL BRANCH PREDICTION:
+   Executed Instruction: CMP RAX, RBX (ALU performs 64-bit internal subtract RAX - RBX)
+   - ZF (Zero Flag)    : 0 (Zero when RAX == RBX)
+   - SF (Sign Flag)    : 1 (Set if result is negative, i.e., RAX < RBX)
+   - CF (Carry Flag)   : 1 (Set if unsigned borrow occurs)
+   - OF (Overflow Flag): 0 (No 64-bit signed arithmetic overflow)
+   Branch Condition Evaluation:
+   - JL .route_a_shorter : TAKEN (SF != OF evaluates to TRUE, Route A is shorter)
+   - JG .route_b_shorter : NOT TAKEN
+   - JE .routes_equal    : NOT TAKEN
+
+4. CO3: 64-BIT HARDWARE MULTIPLICATION (IMUL) OPERATIONAL ENERGY SCORE:
+   Formula: Energy_Score = Distance_Meters * Elevation_Factor
+   Hardware Multiplier: Single-Cycle 64-Bit x86-64 Signed Multiplier (IMUL)
+   - Route A Gradient Multiplier: 719000 m * 15 = 10785000 energy units (R8)
+   - Route B Gradient Multiplier: 832000 m * 15 = 12480000 energy units (R9)
+   - Operational Energy Saved   : 1695000 units (13.58% traction energy reduction)
+----------------------------------------------------------------------------------------
+CO4 SYSTEM INTEGRATION SUMMARY:
+Java Route Graph -> 64-bit Integer Quadwords -> ALU Flag Comparison -> IMUL Energy Optimization
+========================================================================================

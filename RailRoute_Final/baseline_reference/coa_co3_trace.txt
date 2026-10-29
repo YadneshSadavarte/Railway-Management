@@ -1,0 +1,81 @@
+========================================================================================
+   COA CO3: ADD-AND-SHIFT MULTIPLICATION & 64-BIT STRING PROCESSING TRACE              
+========================================================================================
+Operational Distance Parameter   : 719000 meters (0x00000000000AF898)
+Peak Elevation Factor Parameter : 15 (0x000000000000000F)
+Railway Ticket Tag Source String : pnr:tkt001|pune-ami
+----------------------------------------------------------------------------------------
+
+1. SUCCESSIVE ADDITION MULTIPLICATION (LOOP COUNTER = ELEVATION FACTOR):
+   Algorithm: Accumulate multiplicand 719000 across 15 successive loop cycles
+   ------------------------------------------------------------------------------------
+   Iter | Counter (RCX) | Added Value | Running Accumulator (Dec) | Quadword (Hex)
+   ------------------------------------------------------------------------------------
+      1 |            14 |      719000 |                    719000 | 0x00000000000AF898
+      2 |            13 |      719000 |                   1438000 | 0x000000000015F130
+      3 |            12 |      719000 |                   2157000 | 0x000000000020E9C8
+      4 |            11 |      719000 |                   2876000 | 0x00000000002BE260
+      5 |            10 |      719000 |                   3595000 | 0x000000000036DAF8
+      6 |             9 |      719000 |                   4314000 | 0x000000000041D390
+      7 |             8 |      719000 |                   5033000 | 0x00000000004CCC28
+      8 |             7 |      719000 |                   5752000 | 0x000000000057C4C0
+      9 |             6 |      719000 |                   6471000 | 0x000000000062BD58
+     10 |             5 |      719000 |                   7190000 | 0x00000000006DB5F0
+     11 |             4 |      719000 |                   7909000 | 0x000000000078AE88
+     12 |             3 |      719000 |                   8628000 | 0x000000000083A720
+     13 |             2 |      719000 |                   9347000 | 0x00000000008E9FB8
+     14 |             1 |      719000 |                  10066000 | 0x0000000000999850
+     15 |             0 |      719000 |                  10785000 | 0x0000000000A490E8
+   ------------------------------------------------------------------------------------
+   Successive Addition Total Product: 10785000 (0x0000000000A490E8)
+
+2. 64-BIT ADD-AND-SHIFT HARDWARE MULTIPLICATION (ZERO IMUL USAGE):
+   Algorithm: Conditional ADD on multiplier LSB, followed by SHL and SHR
+   ------------------------------------------------------------------------------------
+   Iter | LSB | ALU Action       | Accumulator (Dec) | Multiplicand (Dec) | Multiplier
+   ------------------------------------------------------------------------------------
+      1 |   1 | ADD + SHL/SHR    |            719000 |             719000 |         15
+      2 |   1 | ADD + SHL/SHR    |           2157000 |            1438000 |          7
+      3 |   1 | ADD + SHL/SHR    |           5033000 |            2876000 |          3
+      4 |   1 | ADD + SHL/SHR    |          10785000 |            5752000 |          1
+   ------------------------------------------------------------------------------------
+   Add-and-Shift Final Product      : 10785000 (0x0000000000A490E8)
+
+3. MULTIPLICATION VERIFICATION & ALU CROSS-CHECK:
+   - Add-and-Shift Result       : 10785000 (0x0000000000A490E8)
+   - Successive Addition Result : 10785000 (0x0000000000A490E8)
+   - Hardware IMUL Result       : 10785000 (0x0000000000A490E8)
+   - Verification Status        : MATCH (All 3 multiplication algorithms agree)
+
+4. 64-BIT STRING PROCESSING & STRING-INSTRUCTION PIPELINE (CO3):
+   Step 1: REPNE SCASB String Length Determination: 19 characters
+   Step 2: LODSB / Case Conversion / STOSB Execution:
+   ------------------------------------------------------------------------------------
+   Idx | LODSB Char (Hex) | Conversion Action   | STOSB Stored (Hex) | Checksum Subtotal
+   ------------------------------------------------------------------------------------
+     0 | 'p' (0x70)        | SUB AL, 32 (Upper)  | 'P' (0x50)        |                80
+     1 | 'n' (0x6E)        | SUB AL, 32 (Upper)  | 'N' (0x4E)        |               158
+     2 | 'r' (0x72)        | SUB AL, 32 (Upper)  | 'R' (0x52)        |               240
+     3 | ':' (0x3A)        | Pass-Through        | ':' (0x3A)        |               298
+     4 | 't' (0x74)        | SUB AL, 32 (Upper)  | 'T' (0x54)        |               382
+     5 | 'k' (0x6B)        | SUB AL, 32 (Upper)  | 'K' (0x4B)        |               457
+     6 | 't' (0x74)        | SUB AL, 32 (Upper)  | 'T' (0x54)        |               541
+     7 | '0' (0x30)        | Pass-Through        | '0' (0x30)        |               589
+     8 | '0' (0x30)        | Pass-Through        | '0' (0x30)        |               637
+     9 | '1' (0x31)        | Pass-Through        | '1' (0x31)        |               686
+    10 | '|' (0x7C)        | Pass-Through        | '|' (0x7C)        |               810
+    11 | 'p' (0x70)        | SUB AL, 32 (Upper)  | 'P' (0x50)        |               890
+    12 | 'u' (0x75)        | SUB AL, 32 (Upper)  | 'U' (0x55)        |               975
+    13 | 'n' (0x6E)        | SUB AL, 32 (Upper)  | 'N' (0x4E)        |              1053
+    14 | 'e' (0x65)        | SUB AL, 32 (Upper)  | 'E' (0x45)        |              1122
+    15 | '-' (0x2D)        | Pass-Through        | '-' (0x2D)        |              1167
+    16 | 'a' (0x61)        | SUB AL, 32 (Upper)  | 'A' (0x41)        |              1232
+    17 | 'm' (0x6D)        | SUB AL, 32 (Upper)  | 'M' (0x4D)        |              1309
+    18 | 'i' (0x69)        | SUB AL, 32 (Upper)  | 'I' (0x49)        |              1382
+   ------------------------------------------------------------------------------------
+   - Source String (LODSB)      : pnr:tkt001|pune-ami
+   - Converted String (STOSB)   : PNR:TKT001|PUNE-AMI
+   - String Length (SCASB)      : 19 characters
+   - Quadword Checksum (ADD)    : 1382 (0x0000000000000566)
+   - Block Copy & CMP (CMPSB)   : MATCH (rep movsb duplicate verified via repe cmpsb)
+========================================================================================
